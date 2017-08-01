@@ -18,7 +18,7 @@
   },
   "defaultTimezone": "America/New_York",
   "webhook": {
-    "url": "https://bionic-freehold-593.appspot.com",
+    "url": "http://localhost",
     "headers": {
       "": ""
     },
