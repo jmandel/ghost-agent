@@ -1,0 +1,69 @@
+{
+  "userSays": [
+    {
+      "id": "66f7464c-ae6d-4d17-980a-0530fa690280",
+      "data": [
+        {
+          "text": "panda",
+          "alias": "rescueWord",
+          "meta": "@sys.any",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "c468b607-ee6f-4b4c-8e1d-117939e4bdc0",
+      "data": [
+        {
+          "text": "What about "
+        },
+        {
+          "text": "panda",
+          "alias": "rescueWord",
+          "meta": "@sys.any",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "de29bf9f-bdbf-4883-84a5-ef20bd06d945",
+  "name": "Respond to Challenge",
+  "auto": true,
+  "contexts": [
+    "challenge"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "game.rescue",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@sys.any",
+          "name": "rescueWord",
+          "value": "$rescueWord",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,112 @@
+{
+  "userSays": [
+    {
+      "id": "adf57734-8240-4489-ad89-1fa848f6cbcb",
+      "data": [
+        {
+          "text": "I",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " add "
+        },
+        {
+          "text": "Q",
+          "alias": "userSuppliedLetter",
+          "meta": "@SuppliedLetter",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "3e8a9554-5592-4804-b1f7-2b3bb1ce8d2d",
+      "data": [
+        {
+          "text": "My next letter is "
+        },
+        {
+          "text": "Q",
+          "alias": "userSuppliedLetter",
+          "meta": "@SuppliedLetter",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "8f3989eb-0794-498f-9d8c-477b4f074f73",
+      "data": [
+        {
+          "text": "B",
+          "alias": "userSuppliedLetter",
+          "meta": "@SuppliedLetter",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ba876d0f-5d5e-4541-8a07-b179af03aa93",
+      "data": [
+        {
+          "text": "A",
+          "alias": "userSuppliedLetter",
+          "meta": "@SuppliedLetter",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "17ff0641-e236-4777-b8bd-1680ee2fb3a3",
+  "name": "Supply Next Letter",
+  "auto": true,
+  "contexts": [
+    "state",
+    "await-letter"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "game.supplyLetter",
+      "affectedContexts": [
+        {
+          "name": "state",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "await-letter",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "dataType": "@SuppliedLetter",
+          "name": "userSuppliedLetter",
+          "value": "$userSuppliedLetter",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

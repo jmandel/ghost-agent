@@ -1,0 +1,28 @@
+{
+  "id": "7c243949-59b9-4f82-aa38-c09b8688ca67",
+  "name": "player",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "human",
+      "synonyms": [
+        "me",
+        "myself",
+        "I",
+        "I do",
+        "I will"
+      ]
+    },
+    {
+      "value": "computer",
+      "synonyms": [
+        "machine",
+        "you",
+        "ghost",
+        "you do"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": true
+}

@@ -1,0 +1,123 @@
+{
+  "userSays": [
+    {
+      "id": "0accbf6f-f8ce-42ea-85a9-9ca8bf7b6bce",
+      "data": [
+        {
+          "text": "That\u0027s not "
+        },
+        {
+          "text": "a",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " word"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "3adfeea9-c343-43b8-b213-9c5dfb15021c",
+      "data": [
+        {
+          "text": "panda",
+          "alias": "challengedWord",
+          "meta": "@sys.any",
+          "userDefined": true
+        },
+        {
+          "text": "\u0027s no good"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "4a7855c0-2bfa-453c-8244-638c1bc9b7d8",
+      "data": [
+        {
+          "text": "panda",
+          "alias": "challengedWord",
+          "meta": "@sys.any",
+          "userDefined": true
+        },
+        {
+          "text": " doesn\u0027t count"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "fec54f1c-4e33-405c-8cb4-b62f271e2098",
+      "data": [
+        {
+          "text": "panda",
+          "alias": "challengedWord",
+          "meta": "@sys.any",
+          "userDefined": true
+        },
+        {
+          "text": " isn\u0027t a word"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "2ea543f5-1dfb-4f15-8f23-f486eb91a5cb",
+      "data": [
+        {
+          "text": "Challenge"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "add9c433-cd1d-4763-93d0-cf3c9a25593b",
+      "data": [
+        {
+          "text": "I challenge you!"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "7ca29379-e8ee-4daa-a115-156906d7bccc",
+  "name": "Initiate Challenge",
+  "auto": true,
+  "contexts": [
+    "await-letter"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "game.user-challenge",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@sys.any",
+          "name": "challengedWord",
+          "value": "$challengedWord",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

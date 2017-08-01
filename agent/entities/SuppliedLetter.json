@@ -1,0 +1,165 @@
+{
+  "id": "7bd4d4a4-1c3f-4769-9241-a73d215c7bbc",
+  "name": "SuppliedLetter",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "A",
+      "synonyms": [
+        "A"
+      ]
+    },
+    {
+      "value": "B",
+      "synonyms": [
+        "B"
+      ]
+    },
+    {
+      "value": "C",
+      "synonyms": [
+        "C"
+      ]
+    },
+    {
+      "value": "D",
+      "synonyms": [
+        "D"
+      ]
+    },
+    {
+      "value": "E",
+      "synonyms": [
+        "E"
+      ]
+    },
+    {
+      "value": "F",
+      "synonyms": [
+        "F"
+      ]
+    },
+    {
+      "value": "G",
+      "synonyms": [
+        "G"
+      ]
+    },
+    {
+      "value": "H",
+      "synonyms": [
+        "H"
+      ]
+    },
+    {
+      "value": "I",
+      "synonyms": [
+        "I"
+      ]
+    },
+    {
+      "value": "J",
+      "synonyms": [
+        "J"
+      ]
+    },
+    {
+      "value": "K",
+      "synonyms": [
+        "K"
+      ]
+    },
+    {
+      "value": "L",
+      "synonyms": [
+        "L"
+      ]
+    },
+    {
+      "value": "M",
+      "synonyms": [
+        "M"
+      ]
+    },
+    {
+      "value": "N",
+      "synonyms": [
+        "N"
+      ]
+    },
+    {
+      "value": "O",
+      "synonyms": [
+        "O"
+      ]
+    },
+    {
+      "value": "P",
+      "synonyms": [
+        "pee"
+      ]
+    },
+    {
+      "value": "Q",
+      "synonyms": [
+        "Q"
+      ]
+    },
+    {
+      "value": "R",
+      "synonyms": [
+        "R"
+      ]
+    },
+    {
+      "value": "S",
+      "synonyms": [
+        "S"
+      ]
+    },
+    {
+      "value": "T",
+      "synonyms": [
+        "T"
+      ]
+    },
+    {
+      "value": "U",
+      "synonyms": [
+        "you"
+      ]
+    },
+    {
+      "value": "V",
+      "synonyms": [
+        "V"
+      ]
+    },
+    {
+      "value": "W",
+      "synonyms": [
+        "W"
+      ]
+    },
+    {
+      "value": "X",
+      "synonyms": [
+        "ex"
+      ]
+    },
+    {
+      "value": "Y",
+      "synonyms": [
+        "Y"
+      ]
+    },
+    {
+      "value": "Z",
+      "synonyms": [
+        "zed"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

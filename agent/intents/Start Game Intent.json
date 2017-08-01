@@ -1,0 +1,251 @@
+{
+  "userSays": [
+    {
+      "id": "8f4cf788-7098-4ce3-8cca-35f04d3c679f",
+      "data": [
+        {
+          "text": "again"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "04fe6124-7bae-43f5-bed9-de8b0b235528",
+      "data": [
+        {
+          "text": "play again"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    },
+    {
+      "id": "055d3883-c9bf-4203-8a23-d8944b6c0969",
+      "data": [
+        {
+          "text": "okay again"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a53b0616-e7ff-4cca-af12-9250eb3ecd08",
+      "data": [
+        {
+          "text": "new game"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "438905b5-e915-48a1-b90b-9cdadb8b1c0f",
+      "data": [
+        {
+          "text": "start "
+        },
+        {
+          "text": "a",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " new game"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "49d8e714-4a23-470b-9b7f-762268c0e3be",
+      "data": [
+        {
+          "text": "Let\u0027s play "
+        },
+        {
+          "text": "a",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " new game of "
+        },
+        {
+          "text": "ghost",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": "!"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "98058e02-b1be-4b77-9051-197c6d4f17d1",
+      "data": [
+        {
+          "text": "Let\u0027s play "
+        },
+        {
+          "text": "ghost",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "d0a66b8d-9073-4c3f-be38-8cfd2661cf9f",
+      "data": [
+        {
+          "text": "I",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " want to play"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "49c7cb2b-9a88-453d-81b2-f0cb9b2017ae",
+      "data": [
+        {
+          "text": "Let\u0027s play "
+        },
+        {
+          "text": "a",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " new game."
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "123716e1-b0bd-4727-b170-46aceae604c1",
+      "data": [
+        {
+          "text": "Let\u0027s play a game where "
+        },
+        {
+          "text": "you",
+          "alias": "chosenFirstPlayer",
+          "meta": "@player",
+          "userDefined": true
+        },
+        {
+          "text": " go first"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "d73e55ca-b3b6-4cc2-8789-3180e83c759b",
+      "data": [
+        {
+          "text": "Let\u0027s go"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "96f5b238-9558-49c2-b3a0-ee5631b06b8b",
+      "data": [
+        {
+          "text": "Let\u0027s start a game where "
+        },
+        {
+          "text": "I",
+          "alias": "chosenFirstPlayer",
+          "meta": "@player",
+          "userDefined": true
+        },
+        {
+          "text": " go first"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "94df2b37-ed61-41da-8479-cd9bae8de6fa",
+      "data": [
+        {
+          "text": "I\u0027m ready"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "94d1312f-3a31-48e6-bd01-4969c1352394",
+      "data": [
+        {
+          "text": "Let\u0027s play"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "fb6aa27f-6a15-401d-a971-09ef9f6f6a59",
+  "name": "Start Game Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "game.begin",
+      "affectedContexts": [
+        {
+          "name": "started",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "required": false,
+          "dataType": "@player",
+          "name": "chosenFirstPlayer",
+          "value": "$chosenFirstPlayer",
+          "prompts": [
+            "Who goes first?",
+            "Who\u0027s first?"
+          ]
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": false
+      }
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "WELCOME"
+    }
+  ]
+}

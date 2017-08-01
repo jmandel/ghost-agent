@@ -1,0 +1,31 @@
+{
+  "description": "Ghost",
+  "language": "en",
+  "googleAssistant": {
+    "googleAssistantCompatible": true,
+    "project": "ghost-75fdd",
+    "welcomeIntentSignInRequired": false,
+    "startIntents": [],
+    "systemIntents": [],
+    "endIntentIds": [],
+    "oAuthLinking": {
+      "required": false,
+      "grantType": "AUTH_CODE_GRANT"
+    },
+    "voiceType": "MALE_1",
+    "capabilities": [],
+    "protocolVersion": "V2"
+  },
+  "defaultTimezone": "America/New_York",
+  "webhook": {
+    "url": "https://bionic-freehold-593.appspot.com",
+    "headers": {
+      "": ""
+    },
+    "available": true,
+    "useForDomains": true
+  },
+  "isPrivate": true,
+  "customClassifierMode": "use.after",
+  "mlMinConfidence": 0.3
+}
