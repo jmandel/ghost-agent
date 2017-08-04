@@ -14,17 +14,26 @@ WIN = "WIN"
 WORDLIST = "https://raw.githubusercontent.com/eneko/data-repository/master/data/words.txt"
 base_words = requests.get(WORDLIST).text.split("\n")
 base_words = filter(lambda w: w.isalpha() and w.islower(), base_words)
-
 true_word_map = {w: True for w in base_words if len(w) >= MIN_LENGTH}
 
-word_map = {w: True for w in base_words if len(w) >= MIN_LENGTH and random.random() < .7 and len(w) < 12}
+import math
+import requests
+FREQLIST = "http://norvig.com/ngrams/count_1w.txt"
+freq_words = requests.get(FREQLIST).text.split("\n")
+freqs = {w: math.log(int(f)) for (w, f) in [line.split("\t") for line in freq_words if line]}
+
+word_map = {w: True for w in base_words if len(w) >= MIN_LENGTH and (
+    (w in freqs and freqs[w] > 17) or
+    random.random() < math.e**(freqs.get(w, 0) - 17))
+}
+
+print word_map
+print("Words", len(word_map))
 words_starting_with = defaultdict(lambda: set())
 for w in word_map.keys():
     for prefix_len in range(len(w)):
         words_starting_with[w[:prefix_len]] |= set(w[prefix_len:prefix_len+1])
-
 words_starting_with = dict(words_starting_with)
-
 print "loaded", len(word_map)
 
 def get_options(prefix):
@@ -129,12 +138,14 @@ def hook():
         so_far += params['userSuppliedLetter'].upper()
         decisions = decide(so_far)[0]
         print "decision mid", decisions
-        if not decisions:
+        if so_far in word_map:
+            txt += "You've completd the word %s! I win!"%so_far
+            so_far = ""
+        elif not decisions:
             txt += "I challenge you! There's no word that starts with %s. Can you name one?"%"-".join(so_far)
-            state["soFar"] = so_far
             new_contexts += [{
                 "name":"challenge",
-                "lifespan":2
+                "lifespan":5
             }, {
                 "name": "await-letter",
                 "lifespan": 0
@@ -142,15 +153,11 @@ def hook():
         else:
             next_move = random.choice(decisions).upper()
             so_far += next_move
-            if so_far in word_map:
-                txt += "You've completd the word %s! I win!"%so_far
-                so_far = ""
-            else:
-                new_contexts += [{
-                    "name":"await-letter",
-                    "lifespan":1
-                }]
-                txt  += "I add %s. That makes %s"%(next_move, "-".join(so_far))
-            state["soFar"] = so_far
+            new_contexts += [{
+                "name":"await-letter",
+                "lifespan":1
+            }]
+            txt  += "I add %s. That makes %s"%(next_move, "-".join(so_far))
+        state["soFar"] = so_far
         return finish(txt, new_contexts, state)
     return jsonify({"error": "Action not understood"})

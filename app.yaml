@@ -1,3 +1,6 @@
 entrypoint: gunicorn -b :$PORT app:app
 env: flex
 runtime: python
+automatic_scaling:
+  min_idle_instances: 0
+  max_num_instances: 1
